@@ -1,0 +1,7 @@
+<div *ngIf="content; else notFound" class="card">
+  <h3>{{ content.title }}</h3>
+  <h4>{{ content.author }}</h4>
+  <p [style]="customStyle">{{ content.abstract }}</p>
+  <a href="#" (click)="handleDetailClick($event)">Details</a>
+</div>
+<ng-template #notFound><p>No book found</p></ng-template>
